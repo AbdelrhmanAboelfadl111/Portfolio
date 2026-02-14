@@ -466,6 +466,15 @@ div.sideNav .box-nav {
   height: 100%;
   background-color: rgb(0, 0, 0);
 }
+div.sideNav .box-nav img.btnExit {
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 15px;
+  bottom: initial;
+  left: initial;
+  width: 30px;
+}
 div.sideNav .box-nav .navLogo img {
   width: 230px;
 }
@@ -652,6 +661,28 @@ header.home {
   position: relative;
   height: 100vh;
 }
+@media (max-width: 1300px) {
+  header.home {
+    background-image: url("../img/Screenshot 2026-02-14 234046.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  header.home .content {
+    backdrop-filter: blur(0px) !important;
+  }
+}
+@media (min-width: 769px) and (max-width: 1300px) {
+  header.home {
+    background-image: none;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  header.home .content {
+    backdrop-filter: initial !important;
+  }
+}
 header.home video.bg-video {
   position: absolute;
   top: 0;
@@ -662,6 +693,16 @@ header.home video.bg-video {
   height: 100%;
   object-fit: cover;
 }
+@media (max-width: 1300px) {
+  header.home video.bg-video {
+    display: none;
+  }
+}
+@media (min-width: 769px) and (max-width: 1300px) {
+  header.home video.bg-video {
+    display: initial !important;
+  }
+}
 header.home .content {
   display: flex;
   flex-direction: initial;
@@ -669,7 +710,7 @@ header.home .content {
   align-items: center;
   position: relative;
   background-color: rgba(0, 0, 0, 0.543);
-  backdrop-filter: blur(1px);
+  backdrop-filter: blur(0px);
   z-index: 1;
   border-radius: 20px;
 }

@@ -138,6 +138,11 @@ div.sideNav{
         width: 350px;
         height: 100%;
         background-color: rgb(0, 0, 0);
+        img.btnExit {
+            cursor: pointer;
+            @include Position($type: absolute, $t: 20px, $r: 15px);
+            width: 30px;
+        }
         .navLogo{
             img{
                 width: 230px;
