@@ -194,3 +194,91 @@ div.sideNav{
         }
     }
 }
+div.sideNavcontact{
+    @include flexCenter();
+    .box-navContact{
+        overflow: hidden;
+        &::before{
+            @include Position($type: absolute, $t: 0,$l: 0);
+            @include shapeNav($w: 100%, $h: 100%, $color:rgba(0, 0, 0, 0.463), $opacity: 1);
+            backdrop-filter: blur(3px);
+            z-index: -1;
+        }
+        cursor: initial;
+        z-index: 10000000;
+        position: relative;
+        img.btnExit{
+            cursor: pointer;
+            @include Position($type: absolute, $t: 20px, $r: 15px);
+            width: 30px;
+        }
+        width: initial;
+        height: initial;
+        transform: translate(0,-100%);
+        transition: all 1.5s;
+        padding: 20px 60px 30px 60px;
+        border-radius: 15px;
+        background-image: url("../../../img/ChatGPT\ Image\ Feb\ 14\,\ 2026\,\ 01_02_28\ PM.png");
+        @include bgImg();
+        border: 2px dotted #FF6B00;
+        background-color: rgba(0, 0, 0, 0.644);
+        backdrop-filter: blur(10px);
+        .container{
+            .row{
+                .column{
+                    &.col3{
+                        @include responsive(350){
+                            margin-bottom: 1.5rem;
+                        }
+                    }
+                    .item{
+                        border: 2px dotted #FF6B00;
+                        border-radius: 10px;
+                        transition: all 0.5s;
+                        &:hover{
+                            transform: scale(0.9)
+                        }
+                        .box{
+                            @include flexCenter();
+                            &:hover{
+                                a{
+                                    color: #FF6B00
+                                }
+                            }
+                            a{
+                                width: 100%;
+                                height: 100%;
+                                padding-block: 15px;
+                                transition: all 0.5s;
+                                @include flexCenter(column);
+                                color: white;
+                                img{
+                                    
+                                    width: 60px;
+                                    margin-bottom: 0.5rem;
+                                }
+                                h3{
+                                    margin-bottom: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        h4{
+            @include flexCenter();
+            color: #ffffff;
+            font-size: 40px;
+            @include responsive(350){
+                font-size: 30px;
+            }
+            margin-bottom: 1.5rem;
+            gap: 5px;
+            img{
+                width: 60px;
+                transform: translateY(-5px);
+            }
+        }
+    }
+}

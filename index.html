@@ -30,7 +30,7 @@
             </div>
             <div class="navBtns">
                 <a href="img/cv/CV-ABDELRHMAN_ABOELFADL.pdf" target="_blank"><button class="font2 btnDecorated"><img src="img/document.gif">SHOW CV</button></a>
-                <button class="font2 btnDecorated"><img src="img/mail.gif">CONTACT ME</button>
+                <button class="font2 btnDecorated" onclick="openPopUp('sideNavcontact');StopClose(`box-navContact`)"><img src="img/mail.gif">CONTACT ME</button>
             </div>
             <div class="btnCon">
                 <button class="font2 btnDecorated btnNav" onclick="openPopUp('sideNavBar')"><img src="img/skills.gif"></button>
@@ -67,7 +67,58 @@
             <div class="btnCon">
                 <a href="img/cv/CV-ABDELRHMAN_ABOELFADL.pdf" target="_blank"><button class="font2 btnDecorated"><img
                             src="img/document.gif">SHOW CV</button></a>
-                <button class="font2 btnDecorated"><img src="img/mail.gif">CONTACT </button>
+                <button class="font2 btnDecorated"onclick="openPopUp('sideNavcontact');StopClose(`box-navContact`)"><img src="img/mail.gif">CONTACT </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="sideNav sideNavcontact" onclick="closePopUp('sideNavcontact')">
+        <div class="box-nav box-navContact" >
+            <img src="img/exit.png" class="btnExit" onclick="closePopUp('sideNavcontact')">
+            <h4 class="font1"><img src="img/mail.gif"> Contact Me</h4>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col1 column mb-4">
+                        <div class="item">
+                            <div class="box">
+                                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=abdelrhmanabofadlqassim111@gmail.com &su=Hello&body=This is my message" target="_blank">
+                                    <img src="img/gmail_5968534.png">
+                                    <h3>Gmail</h3>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col2 column mb-4">
+                        <div class="item">
+                            <div class="box">
+                                <a href="https://wa.me/201024187180" target="_blank">
+                                    <img src="img/whatsapp_12635043.png">
+                                    <h3>Whatsapp</h3>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col3 column">
+                        <div class="item">
+                            <div class="box">
+                                <a href="https://www.linkedin.com/in/abdelrhman-aboelfadl-qassim-206927386/" target="_blank">
+                                    <img src="img/linkedin.png">
+                                    <h3>linkedin</h3>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col4 column">
+                        <div class="item">
+                            <div class="box">
+                                <a href="https://github.com/AbdelrhmanAboelfadl111" target="_blank">
+                                    <img src="img/github-logo.png">
+                                    <h3>Github</h3>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

@@ -10,3 +10,9 @@ function closePopUp(popupClass) {
         popup.classList.remove("show");
     }
 }
+function StopClose(BoxCalss) {
+    const Box = document.querySelector(`.${BoxCalss}`);
+    Box.addEventListener("click",(e) => {
+        e.stopPropagation();
+    })
+}
