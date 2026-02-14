@@ -1,7 +1,6 @@
 @use "./../abstracts" as *;
 
 nav#Nav{
-    box-shadow: rgba(69, 69, 69, 0.35) 0px 5px 15px;
     @include Position($type: fixed, $t: 30px, $l: 50%);
     width: 90%;
     transform: translateX(-50%);
