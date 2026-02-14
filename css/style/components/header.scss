@@ -1,0 +1,105 @@
+@use "./../abstracts" as *;
+header.home{
+    @include flexCenter();
+    position: relative;
+    height: 100vh;
+    video.bg-video{
+        @include Position($type: absolute, $t: 0, $l: 0);
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .content{
+        @include flexCenter();
+        position: relative;
+        background-color: rgba(0, 0, 0, 0.543);
+        backdrop-filter: blur(1px);
+        z-index: 1;
+        border-radius: 20px;
+        .container{
+            @include flexCenter(column);
+            .textBox{
+                @include flexCenter(column);
+                width: 100%;
+                color: white;
+                text-align: center;
+                &>*:not(:last-child){
+                    margin-bottom: 0.2rem;
+                }
+                h3{
+                    img{
+                        width: 60px;
+                        transform: translateY(-10px);
+                    }
+                    font-size: 40px;
+                    @include responsive(350){
+                        font-size: 30px;
+                        img{
+                            width: 40px;
+                            transform: translateY(-5px);
+                        }
+                    }
+                }
+                h1{
+                    font-size: 65px;
+                    color: #FF6B00;
+                    margin-bottom: 0.5rem!important;
+                    @include responsive(350){
+                        font-size: 50px
+                    }
+                    @include responsive(650) {
+                        font-size: 60px
+                    }
+                }
+                section.cd-intro{
+                    @include flexCenter();
+                    margin: 0;
+                    h5{
+                        font-size: 30px;
+                        @include responsive(350) {
+                            font-size: 18px
+                        }
+                        @include responsive(450) {
+                            font-size: 22px
+                        }
+                        @include responsive(650) {
+                            font-size: 27px
+                        }
+                        span{
+                            color: white;
+                            span.colored{
+                                color: #FF6B00;
+                                margin-inline: 0.2rem;
+                            }
+                            &::after{
+                                background-color: #FF6B00;
+                                border-radius: 15px;
+                            }
+                        }
+                    }
+                }
+            }
+            .btnCon{
+                margin-top: 0.5rem;
+                width: 100%;
+                @include flexCenter();
+                gap: 10px;
+                button{
+                    
+                    @include responsive(350) {
+                        padding: 5px 10px;
+                        img{
+                            width: 25px;
+                        }
+                    }
+                    @include responsive(850) {
+                        padding: 5px 15px;
+                        img{
+                            width: 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

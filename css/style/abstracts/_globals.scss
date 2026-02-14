@@ -1,0 +1,31 @@
+@use "variables" as *;
+@use "mixin" as *;
+.font1{
+    font-family: 'Roboto'!important;
+}
+.font2{
+    font-family: 'Montserrat';
+}
+span{
+    color:#FF6B00;
+}
+.btnDecorated{
+    &:hover {
+            border: 2px solid rgb(255, 255, 255) !important;
+            color: white;
+            transform: scale(0.96);
+        }
+    
+        transition: all 0.7s;
+        @include flexCenter();
+        background-color: transparent;
+        border: 2px solid #ff6b00;
+        padding: 5px 16px;
+        color: white;
+        border-radius: 10px;
+        text-align: center;
+    
+        img {
+            width: 40px;
+        }
+}
