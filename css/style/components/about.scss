@@ -19,6 +19,7 @@ section.about{
         z-index: 1;
     }
     .container{
+
         padding: 20px;
         position: relative;
         z-index: 4;
@@ -65,6 +66,7 @@ section.about{
                     }
                 }
                 h3{
+                    color: white;
                     font-size: 18px;
                     line-height: 35px;
                     @include responsive(350){

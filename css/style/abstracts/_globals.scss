@@ -1,5 +1,8 @@
 @use "variables" as *;
 @use "mixin" as *;
+*{
+    scroll-behavior: auto!important;
+}
 .font1{
     font-family: 'Roboto'!important;
 }

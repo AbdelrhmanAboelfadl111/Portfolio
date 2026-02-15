@@ -1,3 +1,7 @@
+* {
+  scroll-behavior: auto !important;
+}
+
 .font1 {
   font-family: "Roboto" !important;
 }
@@ -923,6 +927,7 @@ section.about .container .row .column.col1 .item {
   }
 }
 section.about .container .row .column h3 {
+  color: white;
   font-size: 18px;
   line-height: 35px;
 }
