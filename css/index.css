@@ -63,12 +63,36 @@ span {
   transform: rotateX(180deg);
 }
 
+.shape {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 160px;
+  z-index: 1;
+}
+
+.shape2 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 160px;
+  z-index: 1;
+}
+
 @keyframes spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
+  }
+}
+@keyframes glow {
+  from {
+    box-shadow: 0 0 5px #FF6B00;
+  }
+  to {
+    box-shadow: 0 0 20px #FF6B00;
   }
 }
 /* cyrillic-ext */
@@ -325,6 +349,10 @@ nav#Nav {
   backdrop-filter: blur(5px);
   border-radius: 50px;
   background-color: rgba(51, 51, 51, 0.452);
+  transition: all 0.5s;
+}
+nav#Nav.scrolled {
+  background-color: rgba(21, 21, 21, 0.669);
 }
 nav#Nav .container {
   padding: 10px 30px;
@@ -866,20 +894,6 @@ section.about {
   background: linear-gradient(to right, #3c2c1b, #302216);
   position: relative;
 }
-section.about .shape {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 160px;
-  z-index: 1;
-}
-section.about .shape2 {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 160px;
-  z-index: 1;
-}
 section.about .container {
   padding: 20px;
   position: relative;
@@ -889,8 +903,13 @@ section.about .container {
   border-radius: 15px;
 }
 @media (max-width: 1300px) {
+  section.about .container .title {
+    margin-bottom: 2rem;
+  }
+}
+@media (max-width: 1300px) {
   section.about .container .title h2 {
-    font-size: 30px;
+    font-size: 40px;
   }
 }
 @media (min-width: 371px) and (max-width: 1300px) {
@@ -1063,6 +1082,143 @@ section.about .container .row .column.col2 .item .imgCon .layOut {
 }
 section.about .container .row .column.col2 .item .imgCon .layOut img {
   width: 90px;
+}
+
+section.edu {
+  background: #152331;
+  background: linear-gradient(to left, #3c2c1b, #302216);
+  position: relative;
+}
+@media (max-width: 1300px) {
+  section.edu .container .title .spreator img {
+    width: 220px;
+  }
+}
+section.edu .container {
+  position: relative;
+  background-color: rgba(54, 54, 54, 0.5568627451);
+  backdrop-filter: blur(2px);
+  border-radius: 15px;
+  z-index: 10;
+  padding: 20px;
+}
+section.edu .container .row {
+  padding: 20px;
+  padding-top: 40px;
+}
+@media (max-width: 1300px) {
+  section.edu .container .row {
+    padding: 0;
+    padding-top: 40px;
+  }
+}
+section.edu .container .row .column {
+  display: flex;
+  flex-direction: initial;
+  justify-content: center;
+  align-items: center;
+}
+section.edu .container .row .column:nth-of-type(2), section.edu .container .row .column:nth-of-type(1) {
+  margin-bottom: 5rem;
+}
+@media (max-width: 1300px) {
+  section.edu .container .row .column:nth-of-type(odd), section.edu .container .row .column:nth-of-type(even) {
+    margin-bottom: 2rem !important;
+  }
+}
+section.edu .container .row .column:nth-of-type(even) .item .box {
+  background: linear-gradient(to right, #232526, #414345);
+}
+section.edu .container .row .column:nth-of-type(odd) .item .box {
+  background: linear-gradient(to left, #232526, #414345);
+}
+@media (max-width: 1300px) {
+  section.edu .container .row .column:last-child .box {
+    padding: 5px !important;
+  }
+}
+section.edu .container .row .column .item {
+  display: flex;
+  flex-direction: initial;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+section.edu .container .row .column .item .box {
+  background-image: url("../img/bg.png");
+  background: #232526;
+  width: 80%;
+}
+@media (max-width: 1300px) {
+  section.edu .container .row .column .item .box {
+    width: 100%;
+  }
+}
+section.edu .container .row .column .item .box {
+  height: 140px;
+}
+section.edu .container .row .column .item .box.unshow {
+  transform: scale(0.95);
+  filter: blur(4px);
+}
+section.edu .container .row .column .item .box {
+  cursor: pointer;
+  position: relative;
+  border: 4px solid #FF6B00;
+  animation: glow 1s linear infinite alternate;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: initial;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.5s;
+  padding: 20px;
+  gap: 15px;
+}
+@media (max-width: 1300px) {
+  section.edu .container .row .column .item .box {
+    padding: 0;
+    gap: 0;
+  }
+}
+@media (min-width: 371px) and (max-width: 1300px) {
+  section.edu .container .row .column .item .box {
+    padding: 15px !important;
+  }
+}
+section.edu .container .row .column .item .box img {
+  width: 90px;
+}
+@media (max-width: 1300px) {
+  section.edu .container .row .column .item .box img {
+    width: 50px;
+  }
+}
+@media (min-width: 371px) and (max-width: 1300px) {
+  section.edu .container .row .column .item .box img {
+    width: 70px;
+  }
+}
+section.edu .container .row .column .item .box .textCon {
+  width: 80%;
+}
+section.edu .container .row .column .item .box .textCon div {
+  display: flex;
+  flex-direction: initial;
+  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
+  color: white;
+}
+section.edu .container .row .column .item .box .textCon div:not(:last-child) h2, section.edu .container .row .column .item .box .textCon div:not(:last-child) h3 {
+  margin-bottom: 0.5rem;
+}
+section.edu .container .row .column .item .box .textCon div h2 {
+  display: flex;
+}
+section.edu .container .row .column .item .box .textCon div h3 {
+  margin-left: 0.5rem;
 }
 
 /*# sourceMappingURL=index.css.map */

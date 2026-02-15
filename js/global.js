@@ -23,6 +23,15 @@ function LenisStart() {
         smooth: true,
     });
 
+    lenis.on("scroll", ({ scroll}) => {
+        let nav = document.querySelector("#Nav");
+        if (scroll >= 30) {
+            nav.classList.add("scrolled");
+        }else{
+            nav.classList.remove("scrolled");
+        }
+    })
+
     // Anchor Link Smooth Scroll
     document.querySelectorAll('a[href^="#"]').forEach(link => {
         link.addEventListener("click", function (e) {
@@ -47,7 +56,7 @@ function LenisStart() {
     const navLinks = document.querySelectorAll(".navLinks a");
     const sideLinks = document.querySelectorAll(".sideNavBar .links a");
  function updateActive(scrollPos){
-    const navOffset = 30; //
+    const navOffset = 200; //
     sections.forEach(section => {
         const top = section.getBoundingClientRect().top + window.scrollY - navOffset;
         const bottom = top + section.offsetHeight;

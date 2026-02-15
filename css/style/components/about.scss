@@ -3,21 +3,7 @@ section.about{
     background: #152331;
     background: linear-gradient(to right,#3c2c1b, #302216);
     position: relative;
-    .shape{
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 160px;
-        z-index: 1;
-
-    }
-    .shape2 {
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        width: 160px;
-        z-index: 1;
-    }
+    
     .container{
 
         padding: 20px;
@@ -27,9 +13,12 @@ section.about{
         backdrop-filter: blur(2px);
         border-radius: 15px;
         .title{
+            @include responsive(350) {
+                margin-bottom: 2rem;
+            }
             h2{
                 @include responsive(350){
-                    font-size: 30px;
+                    font-size: 40px;
                 }
                 @include responsive(450){
                     font-size: 40px;
