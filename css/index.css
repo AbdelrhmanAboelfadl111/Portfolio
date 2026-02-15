@@ -35,6 +35,38 @@ span {
   width: 40px;
 }
 
+.title h2 {
+  width: 100%;
+  display: flex;
+  flex-direction: initial;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 40px;
+}
+.title h2 img {
+  width: 70px;
+}
+.title .spreator {
+  width: 100%;
+  display: flex;
+  flex-direction: initial;
+  justify-content: center;
+  align-items: center;
+}
+.title .spreator img {
+  width: 270px;
+  transform: rotateX(180deg);
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 /* cyrillic-ext */
 @font-face {
   font-family: "Montserrat";
@@ -441,7 +473,7 @@ div.sideNav.show .box-nav {
   transform: translateX(0);
 }
 div.sideNav {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: initial;
   bottom: initial;
@@ -548,7 +580,7 @@ div.sideNavcontact .box-navContact {
   overflow: hidden;
 }
 div.sideNavcontact .box-navContact::before {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: initial;
   bottom: initial;
@@ -672,7 +704,7 @@ header.home {
     backdrop-filter: blur(0px) !important;
   }
 }
-@media (min-width: 769px) and (max-width: 1300px) {
+@media (min-width: 577px) and (max-width: 1300px) {
   header.home {
     background-image: none;
     background-size: cover;
@@ -698,7 +730,7 @@ header.home video.bg-video {
     display: none;
   }
 }
-@media (min-width: 769px) and (max-width: 1300px) {
+@media (min-width: 577px) and (max-width: 1300px) {
   header.home video.bg-video {
     display: initial !important;
   }
@@ -823,6 +855,209 @@ header.home .content .container .btnCon {
   header.home .content .container .btnCon button img {
     width: 30px;
   }
+}
+
+section.about {
+  background: #152331;
+  background: linear-gradient(to right, #3c2c1b, #302216);
+  position: relative;
+}
+section.about .shape {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 160px;
+  z-index: 1;
+}
+section.about .shape2 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 160px;
+  z-index: 1;
+}
+section.about .container {
+  padding: 20px;
+  position: relative;
+  z-index: 4;
+  background-color: rgba(54, 54, 54, 0.5568627451);
+  backdrop-filter: blur(2px);
+  border-radius: 15px;
+}
+@media (max-width: 1300px) {
+  section.about .container .title h2 {
+    font-size: 30px;
+  }
+}
+@media (min-width: 371px) and (max-width: 1300px) {
+  section.about .container .title h2 {
+    font-size: 40px;
+  }
+}
+@media (max-width: 1300px) {
+  section.about .container .title h2 img {
+    width: 55px;
+  }
+}
+@media (max-width: 1300px) {
+  section.about .container .title .spreator img {
+    width: 220px;
+  }
+}
+section.about .container .row .column.col1 {
+  display: flex;
+  align-items: center;
+}
+section.about .container .row .column.col1 .item {
+  padding: 20px;
+}
+@media (max-width: 1300px) {
+  section.about .container .row .column.col1 .item {
+    padding: 10px;
+    text-align: center;
+  }
+}
+@media (min-width: 1181px) and (max-width: 1300px) {
+  section.about .container .row .column.col1 .item {
+    text-align: start;
+  }
+}
+section.about .container .row .column h3 {
+  font-size: 18px;
+  line-height: 35px;
+}
+@media (max-width: 1300px) {
+  section.about .container .row .column h3 {
+    font-size: 17px;
+    line-height: 31px;
+  }
+}
+section.about .container .row .column h3 span {
+  font-size: 20px;
+}
+@media (max-width: 1300px) {
+  section.about .container .row .column h3 span {
+    font-size: 19px;
+  }
+}
+section.about .container .row .column h3 span {
+  font-weight: bolder;
+}
+section.about .container .row .column h3 span.angularSpan {
+  color: red;
+}
+@media (max-width: 1300px) {
+  section.about .container .row .column.col2 {
+    margin-top: 1.5rem;
+  }
+}
+section.about .container .row .column.col2 .item {
+  display: flex;
+  flex-direction: initial;
+  justify-content: center;
+  align-items: center;
+}
+section.about .container .row .column.col2 .item .imgCon {
+  cursor: pointer;
+  position: relative;
+  width: 350px;
+  height: 350px;
+  border-radius: 100%;
+  z-index: 3;
+  display: flex;
+  flex-direction: initial;
+  justify-content: center;
+  align-items: center;
+}
+section.about .container .row .column.col2 .item .imgCon::before {
+  content: "";
+  display: block;
+  width: 105%;
+  height: 105%;
+  background-color: rgb(255, 255, 255);
+  opacity: 1;
+}
+@media (max-width: 1300px) {
+  section.about .container .row .column.col2 .item .imgCon::before {
+    width: 105%;
+    height: 94%;
+  }
+}
+@media (min-width: 371px) and (max-width: 1300px) {
+  section.about .container .row .column.col2 .item .imgCon::before {
+    width: 105%;
+    height: 105%;
+  }
+}
+@media (min-width: 769px) and (max-width: 1300px) {
+  section.about .container .row .column.col2 .item .imgCon::before {
+    width: 104%;
+    height: 83%;
+  }
+}
+@media (min-width: 992px) and (max-width: 1300px) {
+  section.about .container .row .column.col2 .item .imgCon::before {
+    width: 105%;
+    height: 105%;
+  }
+}
+section.about .container .row .column.col2 .item .imgCon::before {
+  position: absolute;
+  border-radius: 100%;
+  z-index: 1;
+  animation: spin 5s linear infinite;
+  background: conic-gradient(from 0deg, rgba(16, 7, 0, 0), #ff7a1a, rgba(0, 0, 0, 0), #ff791a, rgba(255, 106, 0, 0));
+  filter: blur(0px);
+}
+section.about .container .row .column.col2 .item .imgCon img {
+  position: relative;
+  width: 100%;
+  z-index: 2;
+}
+section.about .container .row .column.col2 .item .imgCon:hover .layOut {
+  opacity: 1;
+}
+section.about .container .row .column.col2 .item .imgCon .layOut {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.29);
+  backdrop-filter: blur(5px);
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  z-index: 5;
+  display: flex;
+  flex-direction: initial;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: all 0.5s;
+}
+@media (max-width: 1300px) {
+  section.about .container .row .column.col2 .item .imgCon .layOut {
+    width: 100%;
+    height: 90%;
+  }
+}
+@media (min-width: 371px) and (max-width: 1300px) {
+  section.about .container .row .column.col2 .item .imgCon .layOut {
+    width: 102%;
+    height: 98%;
+  }
+}
+@media (min-width: 769px) and (max-width: 1300px) {
+  section.about .container .row .column.col2 .item .imgCon .layOut {
+    width: 101%;
+    height: 78%;
+  }
+}
+@media (min-width: 992px) and (max-width: 1300px) {
+  section.about .container .row .column.col2 .item .imgCon .layOut {
+    width: 100%;
+    height: 100%;
+  }
+}
+section.about .container .row .column.col2 .item .imgCon .layOut img {
+  width: 90px;
 }
 
 /*# sourceMappingURL=index.css.map */

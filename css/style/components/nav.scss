@@ -122,7 +122,7 @@ div.sideNav{
             transform: translateX(0);
         }
     }
-    @include Position($type: absolute, $t: 0, $l: 0);
+    @include Position($type: fixed, $t: 0, $l: 0);
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.208);
@@ -204,7 +204,7 @@ div.sideNavcontact{
     .box-navContact{
         overflow: hidden;
         &::before{
-            @include Position($type: absolute, $t: 0,$l: 0);
+            @include Position($type: fixed, $t: 0,$l: 0);
             @include shapeNav($w: 100%, $h: 100%, $color:rgba(0, 0, 0, 0.463), $opacity: 1);
             backdrop-filter: blur(3px);
             z-index: -1;

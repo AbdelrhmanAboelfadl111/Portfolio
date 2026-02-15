@@ -19,6 +19,11 @@
             @content;
         }
     }
+    @else if($breakPoint ==992) {
+        @media (min-width: 992px) and (max-width: 1300px) {
+            @content;
+        }
+    }
     @else if($breakPoint ==1050) {
         @media (min-width: 992px) and (max-width: 1300px) {
             @content;

@@ -10,7 +10,7 @@ header.home{
             backdrop-filter: blur(0px)!important;
         }
     }
-    @include responsive(850){
+    @include responsive(650){
         background-image: none;
         @include bgImg();
         .content{
@@ -25,7 +25,7 @@ header.home{
         @include responsive(350){
             display: none;
         }
-        @include responsive(850){
+        @include responsive(650){
             display: initial!important;
         }
     }
