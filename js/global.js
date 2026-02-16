@@ -17,22 +17,21 @@ function StopClose(BoxCalss) {
     })
 }
 function LenisStart() {
-    // Initialize Lenis
-    const lenis = new Lenis({
+
+    lenis = new Lenis({
         duration: 1.2,
         smooth: true,
     });
 
-    lenis.on("scroll", ({ scroll}) => {
+    lenis.on("scroll", ({ scroll }) => {
         let nav = document.querySelector("#Nav");
         if (scroll >= 30) {
             nav.classList.add("scrolled");
-        }else{
+        } else {
             nav.classList.remove("scrolled");
         }
-    })
+    });
 
-    // Anchor Link Smooth Scroll
     document.querySelectorAll('a[href^="#"]').forEach(link => {
         link.addEventListener("click", function (e) {
             e.preventDefault();
@@ -47,58 +46,112 @@ function LenisStart() {
         });
     });
 
-    function getSectionPosition(section) {
-        return section.getBoundingClientRect().top + window.scrollY;
-    }
-
-    // Active Section
-    const sections = document.querySelectorAll("header, section");
-    const navLinks = document.querySelectorAll(".navLinks a");
-    const sideLinks = document.querySelectorAll(".sideNavBar .links a");
- function updateActive(scrollPos){
-    const navOffset = 200; //
-    sections.forEach(section => {
-        const top = section.getBoundingClientRect().top + window.scrollY - navOffset;
-        const bottom = top + section.offsetHeight;
-
-        if(scrollPos >= top && scrollPos < bottom){
-            navLinks.forEach(link => link.classList.remove("active"));
-            sideLinks.forEach(link => link.classList.remove("active"));
-
-            const mainLink = document.querySelector(`.navLinks a[href='#${section.id}']`);
-            const sideLink = document.querySelector(`.sideNavBar .links a[href='#${section.id}']`);
-            if(mainLink) mainLink.classList.add("active");
-            if(sideLink) sideLink.classList.add("active");
-        }
-    });
-}
-
-
-
-    // Lenis Scroll Event
-    lenis.on('scroll', ({ scroll }) => {
-        updateActive(scroll);
-    });
-
-    // RAF Loop
     function raf(time) {
         lenis.raf(time);
         requestAnimationFrame(raf);
     }
-    requestAnimationFrame(raf);
 
-    // Initial Active Check
-    window.addEventListener('load', () => {
-        updateActive(lenis.scroll);
+    requestAnimationFrame(raf);
+}
+
+function setActiveNavSynced() {
+    const navLinks = document.querySelectorAll("#Nav .navLinks a");
+    const sideLinks = document.querySelectorAll(".sideNavBar .links a");
+
+    // ندمج كل اللينكات في مصفوفة واحدة للتسهيل
+    const allLinks = [...navLinks, ...sideLinks];
+
+    allLinks.forEach(link => {
+        link.addEventListener("click", function(e) {
+            // أولاً نشيل active من كل اللينكات
+            allLinks.forEach(l => l.classList.remove("active"));
+
+            // نضيف active للينك اللي اتضغط
+            const href = this.getAttribute("href");
+
+            // نضيف active لكل اللينكات اللي لها نفس href
+            allLinks.forEach(l => {
+                if(l.getAttribute("href") === href) {
+                    l.classList.add("active");
+                }
+            });
+        });
     });
-    lenis.on('scroll', ({ scroll }) => {
-    if (scroll >= 260 && scroll <= 280) {
-        let Ancor = document.querySelector(".nav .navLinks ul a[href='#Home']");
-        if(Ancor && !Ancor.classList.contains("active")) {
-            Ancor.classList.add("active"); 
-        }
-    }
+}
+function blurBox(sectionName) {
+    let boxEdu = document.querySelectorAll(`#${sectionName} .container .row .column .item .box`);
+boxEdu.forEach((box) => {
+    box.addEventListener("mouseenter", () => {
+        boxEdu.forEach((box2) => {
+            if (box2 != box) {
+                box2.classList.add("unshow")
+            }
+        })
+    })
 });
-    
+boxEdu.forEach((box) => {
+    box.addEventListener("mouseleave", () => {
+        boxEdu.forEach((box2) => {
+            if (box2 != box) {
+                box2.classList.remove("unshow")
+            }
+        })
+    })
+});
+}
+function scrollSpyObserver() {
+    const sections = document.querySelectorAll("section[id], header");
+    const navLinks = document.querySelectorAll("#Nav .navLinks a");
+    const sideLinks = document.querySelectorAll(".sideNavBar .links a");
+    const allLinks = [...navLinks, ...sideLinks];
+
+    const nav = document.querySelector("#Nav");
+    const navHeight = nav ? nav.offsetHeight : 0;
+
+    const lastSection = document.querySelector("#Projects"); // آخر سيكشن
+
+    const observerOptions = {
+        root: null,
+        rootMargin: `-${navHeight}px 0px 0px 0px`,
+        threshold: 0.3
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            const sectionId = entry.target.getAttribute("id") || "Home";
+
+            if (sectionId === "Projects") return;
+
+            if (entry.isIntersecting) {
+                allLinks.forEach(l => l.classList.remove("active"));
+
+                allLinks.forEach(l => {
+                    if (l.getAttribute("href") === `#${sectionId}`) {
+                        l.classList.add("active");
+                    }
+                });
+            }
+        });
+    }, observerOptions);
+
+    sections.forEach(section => observer.observe(section));
+
+    window.addEventListener("scroll", () => {
+        if (!lastSection) return;
+
+        const scrollY = window.pageYOffset + navHeight + 1;
+        const sectionTop = lastSection.offsetTop;
+        const sectionBottom = sectionTop + lastSection.offsetHeight;
+
+        if (scrollY >= sectionTop && scrollY <= sectionBottom) {
+            allLinks.forEach(l => {
+                if (l.getAttribute("href") === "#Projects") {
+                    l.classList.add("active");
+                } else {
+                    l.classList.remove("active");
+                }
+            });
+        }
+    });
 }
 

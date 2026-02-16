@@ -1,5 +1,5 @@
 @use "./../abstracts" as *;
-section.edu{
+section.edu,section.skills,section.projects,.contact{
     background: #152331;
     background: linear-gradient(to left, #3c2c1b, #302216);
     position: relative;
@@ -82,7 +82,7 @@ section.edu{
                         border-radius: 15px;
                         @include flexCenter();
                         justify-content: space-between;
-                        transition: all 0.5s;
+                        transition: all 0.5s ;
                         padding: 20px;
                         gap: 15px;
                         @include responsive(350) {
@@ -115,9 +115,17 @@ section.edu{
                                 
                                 h2{
                                     display: flex;
+                                    margin-bottom: 0;
+                                    @include responsive(1050){
+                                        font-size: 21px;
+                                    }
                                 }
                                 h3{
                                     margin-left: 0.5rem;
+                                    margin-bottom: 0;
+                                    @include responsive(1050){
+                                        font-size: 19px;
+                                    }
                                 }
                             }
                         }

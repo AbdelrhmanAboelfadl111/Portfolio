@@ -1,7 +1,7 @@
 @use "./../abstracts" as *;
 section.about{
     background: #152331;
-    background: linear-gradient(to right,#3c2c1b, #302216);
+    background: linear-gradient(to left,#3c2c1b, #302216);
     position: relative;
     
     .container{

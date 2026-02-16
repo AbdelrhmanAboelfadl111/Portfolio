@@ -45,13 +45,14 @@ nav#Nav{
                     height: 100%;
                     transition: all 0.5s;
                     color: white;
+                    overflow: hidden;
                     &.active{
                         color: #FF6B00;
                     }
                     &:hover{
                         color:#FF6B00;
                     }
-                    &.active::before{
+                    &::before{
                         @include shapeNav($w: 10px, $h: 10px, $color:rgba(255, 166, 0, 0), $opacity: 1);
                         position: absolute;
                         bottom: 0;
@@ -59,8 +60,12 @@ nav#Nav{
                         border:2px solid  #FF6B00 ;
                         border-right: 0;
                         border-top: 0;
+                        opacity: 1;
+                        transform: translateY(110%);
+                        opacity: 0;
+                        transition: all 0.5s;
                     }
-                    &.active::after{
+                    &::after{
                         @include shapeNav($w: 10px, $h: 10px, $color: rgba(255, 166, 0, 0), $opacity: 1);
                         position: absolute;
                         border: 2px solid  #FF6B00;
@@ -68,6 +73,13 @@ nav#Nav{
                         right: 0!important;
                         border-left: 0;
                         border-bottom: 0;
+                        transform: translateY(-110%);
+                        opacity: 0;
+                        transition: all 0.5s;
+                    }
+                    &.active::after,&.active::before{
+                        transform: translateX(0);
+                        opacity: 1;
                     }
                     li {
 

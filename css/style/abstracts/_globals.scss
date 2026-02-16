@@ -39,7 +39,7 @@ span{
         @include flexCenter();
         color: white;
         font-size: 40px;
-
+        text-transform: uppercase;
         img {
             width: 70px;
         }
@@ -69,4 +69,87 @@ span{
     right: 0;
     width: 160px;
     z-index: 1;
+}
+ul.splide__pagination{
+    display: none;
+}
+button.splide__arrow{
+    transition: all 0.5s;
+    background-color: black;
+    border: 2px solid #FF6B00;
+    padding: 10px;
+    svg{
+        fill: white;
+        width: 50px;
+    }
+}
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* الخلفية */
+::-webkit-scrollbar-track {
+    background: #111;
+}
+
+/* الجزء المتحرك */
+::-webkit-scrollbar-thumb {
+    background: #FF6B00;
+    border-radius: 10px;
+    cursor:crosshair;
+}
+
+/* عند hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #b54c02;
+}
+
+.Loading{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000000000;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/bg.png");
+    @include flexCenter();
+    transition: all 0.5s;
+    &.unshow {
+        opacity: 0;
+        z-index: -333;
+    }
+    .loader {
+            display: inline-block;
+            font-size: 48px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            color: #FFF;
+            position: relative;
+            
+        }
+    
+        .loader::before {
+            content: '';
+            position: absolute;
+            left: 34px;
+            bottom: 18px;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border: 5px solid #FFF;
+            border-bottom-color: #FF3D00;
+            box-sizing: border-box;
+            animation: rotation 0.6s linear infinite;
+        }
+    
+        @keyframes rotation {
+            0% {
+                transform: rotate(0deg);
+            }
+    
+            100% {
+                transform: rotate(360deg);
+            }
+        }
 }
