@@ -16,3 +16,36 @@
         box-shadow: 0 0 20px #FF6B00;
     }
 }
+@keyframes curtain-reveal {
+    0% {
+        top: 0%;
+    }
+
+    100% {
+        top: 110%;
+    }
+}
+
+@keyframes dot-appear {
+
+    0%,
+    55% {
+        opacity: 0;
+        transform: scale(0.4);
+    }
+
+    75% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    90% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(0.4);
+    }
+}
