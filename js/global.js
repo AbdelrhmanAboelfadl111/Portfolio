@@ -161,14 +161,41 @@ function scrollSpyObserver() {
 }
 const indicator = document.querySelector(".scroll-indicator");
 
-
-
 (function () {
   const loader = document.getElementById("site-loader");
   const barFill = document.getElementById("barFill");
   const orbPct = document.getElementById("orbPct");
   const barNum = document.getElementById("barNum");
   const statusEl = document.getElementById("statusText");
+
+  // إضافة الفئة loading-page للـ body عند بدء التحميل
+  document.body.classList.add("loading-page");
+
+  // ─── دالة لمنع التمرير بالماوس والـ touch ───
+  const preventScroll = (e) => {
+    // منع جميع أنواع التمرير
+    if (e.type === "wheel" || e.type === "DOMMouseScroll") {
+      e.preventDefault();
+      return false;
+    }
+    // منع التمرير بالـ touch على الموبايل
+    if (e.type === "touchmove") {
+      e.preventDefault();
+      return false;
+    }
+    // منع الـ scroll عام
+    if (e.type === "scroll") {
+      window.scrollTo(0, 0);
+    }
+  };
+
+  // إضافة event listeners لمنع التمرير
+  document.addEventListener("wheel", preventScroll, { passive: false });
+  document.addEventListener("DOMMouseScroll", preventScroll, {
+    passive: false,
+  });
+  document.addEventListener("touchmove", preventScroll, { passive: false });
+  window.addEventListener("scroll", preventScroll, { passive: false });
 
   const statuses = [
     "initializing",
@@ -248,6 +275,15 @@ const indicator = document.querySelector(".scroll-indicator");
 
       setTimeout(() => {
         loader.classList.add("done");
+        // إزالة الـ loading-page من الـ body للسماح بالتمرير
+        document.body.classList.remove("loading-page");
+
+        // إزالة event listeners لمنع التمرير
+        document.removeEventListener("wheel", preventScroll);
+        document.removeEventListener("DOMMouseScroll", preventScroll);
+        document.removeEventListener("touchmove", preventScroll);
+        window.removeEventListener("scroll", preventScroll);
+
         // بعد انتهاء الـ transition نشيله من الـ DOM
         loader.addEventListener(
           "transitionend",
