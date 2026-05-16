@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 window.addEventListener("load", () => {
   const loadingDiv = document.querySelector(".Loading");
-  loadingDiv.classList.add("unshow");
+  loadingDiv?.classList.add("unshow");
   document.body.classList.remove("loading-active");
   window.scrollTo(0, 0); // Ensure page starts from top
 });

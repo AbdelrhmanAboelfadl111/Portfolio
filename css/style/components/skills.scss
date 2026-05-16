@@ -10,6 +10,71 @@ section#Skills{
 
         }
         .row{
+            .item{
+                @include responsive(350) {
+                    overflow-x: auto!important;
+                }
+            
+                @include responsive(1050) {
+                    overflow-x: hidden !important;
+                }
+            }
+            ul{
+                @include responsive(350) {
+                        width: max-content !important;
+                    }
+                @include responsive(1050) {
+                    width: 100% !important;
+                }
+                li{
+                    margin-inline: .5rem;
+                    button{
+                        background-color: transparent;
+                        color:rgb(154, 154, 154);
+                        font-family: 'Roboto';
+                        font-size: 2rem;
+                        font-weight: 500;
+                        padding: 10px 30px;
+                        position: relative;
+                        overflow: hidden;
+                        &::after{
+                            content: '';
+                            display: block;
+                            position: absolute;
+                            top: -100%;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            border: 2px solid #FF6B00;
+                            border-block: none;
+                            border-radius: 0px;
+                            transition: all 0.3s ease-in-out;
+                            opacity: 0;
+                        }
+                    }
+                    button.active{
+                        color: #FF6B00;
+                        &::after{
+                            top:0 ;
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+            .softSkills,.programmingLanguages,.frontEnd,.technologiesTools{
+                .row{
+                    .column{
+                        opacity: 0;
+                        &.animate {
+                            animation: slideInUp 0.5s ease-out forwards;
+                        }
+                        img{
+                            width: 70px;
+                            margin-right: 1.5rem;
+                        }
+                    }
+                }
+            }
             .column{
                 margin-bottom: 3rem;
                 .item{
