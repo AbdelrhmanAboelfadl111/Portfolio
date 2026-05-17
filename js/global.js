@@ -159,6 +159,7 @@ function scrollSpyObserver() {
     }
   });
 }
+
 const indicator = document.querySelector(".scroll-indicator");
 
 (function () {
