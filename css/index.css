@@ -1680,58 +1680,86 @@ section#Skills .container .row .column .item .box {
 section#Projects .container .title h2 img {
   transform: translateY(-5px);
 }
-section#Projects .container .splide .splide__track {
-  padding: 10px;
+section#Projects .container ul {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
 }
-section#Projects .container .splide .splide__track .splide__list {
-  padding: 10px;
+section#Projects .container ul li:not(:last-child) {
+  margin-right: 20px;
 }
-section#Projects .container .splide .splide__track .splide__list li {
-  height: 250px;
+section#Projects .container ul li button {
+  padding: 10px 20px;
+  background-color: rgba(74, 74, 74, 0.616);
+  width: 100%;
+  color: #ffffff;
+  transition: all 0.3s ease-in-out;
+  transform: scale(0.9);
 }
-section#Projects .container .splide .splide__track .splide__list li .box:hover .layOut {
+section#Projects .container ul li button:hover {
+  background-color: rgba(61, 61, 61, 0.8);
+}
+section#Projects .container ul li button.active {
+  background-color: #FF6B00;
+  transform: scale(1);
+}
+section#Projects .container .columnProject {
+  opacity: 0;
+}
+section#Projects .container .columnProject.animate {
+  animation: slideInUp 0.5s ease-out forwards;
+}
+@media (max-width: 1300px) {
+  section#Projects .container .columnProject:not(:last-child) {
+    margin-bottom: 20px !important;
+  }
+}
+@media (min-width: 992px) and (max-width: 1300px) {
+  section#Projects .container .columnProject:not(:last-child) {
+    margin-bottom: 0px !important;
+  }
+}
+section#Projects .container .columnProject .box {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+}
+section#Projects .container .columnProject .box img {
+  width: 100%;
+  height: 100%;
+}
+section#Projects .container .columnProject .box:hover .layOut {
   opacity: 1;
 }
-section#Projects .container .splide .splide__track .splide__list li .box {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  border-radius: 20px;
-  overflow: hidden;
-}
-section#Projects .container .splide .splide__track .splide__list li .box img.img-fluid {
-  width: 100%;
-  height: 100%;
-}
-section#Projects .container .splide .splide__track .splide__list li .box .layOut {
-  opacity: 0;
-  transition: all 0.6s;
-  backdrop-filter: blur(5px);
-  padding: 10px;
+section#Projects .container .columnProject .box .layOut {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.427);
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  justify-content: space-evenly;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
 }
-section#Projects .container .splide .splide__track .splide__list li .box .layOut img.plusSign {
-  width: 80px;
-}
-section#Projects .container .splide .splide__track .splide__list li .box .layOut .titleBox h2 {
-  margin-bottom: 0;
-  font-size: 25px !important;
-}
-section#Projects .container .splide .splide__track .splide__list li .box .layOut .titleBox h2 img {
+section#Projects .container .columnProject .box .layOut img {
   width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
 }
-section#Projects .container .splide .splide__track .splide__list li .box .layOut .titleBox img {
-  width: 170px;
+section#Projects .container .columnProject .box .layOut img.LogoPro {
+  width: 60px;
+  transform: translateX(10px);
+  margin-right: 10px;
+}
+section#Projects .container .columnProject .box .layOut h2 {
+  font-size: 25px;
 }
 
 section.contact .container .row {
