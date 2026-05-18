@@ -189,7 +189,7 @@ var projectsDetails = [
   {
     name: "Mealify",
     id: "12",
-    img: "p1.png",
+    img: "p11.png",
     languages: ["HTML", "Css", "JavaScript", "Bootstrap"],
     description:
       "Mealify is a 🍽️ Meal Planning and Recipe Management Application 📅 Organize your meals, discover new recipes, and manage your nutrition effortlessly 💻 Built with HTML, CSS & JavaScript — clean UI, responsive design 📷 Sections: Dashboard · Recipes · Meal Plan · Nutrition 🎯 Simplify your cooking and eating experience!",
