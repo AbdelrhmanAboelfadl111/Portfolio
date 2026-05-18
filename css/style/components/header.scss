@@ -2,7 +2,7 @@
 header.home{
     @include flexCenter();
     position: relative;
-    height: 100vh;
+    height: 100dvh;
     @include responsive(350){
         background-image: url("../img/Screenshot\ 2026-02-14\ 234046.png");
         @include bgImg();
