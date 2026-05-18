@@ -20,6 +20,8 @@ section#Skills{
                 }
             }
             ul{
+                background-color: #383838;
+                border-radius: 5px;
                 @include responsive(350) {
                         width: max-content !important;
                     }

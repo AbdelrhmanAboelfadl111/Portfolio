@@ -190,7 +190,11 @@
         </div>
     </div>
 
-
+    <div class="pop-up projects" id="projectDetails" onclick="hideProjectDetails()">
+        <div class="pop-up-box" onclick="event.stopPropagation()">
+            
+        </div>
+    </div>
 
     <header class="home" id="Home">
         <video autoplay muted loop class="bg-video">
@@ -419,12 +423,15 @@
         <img src="img/a571b3c0-359a-42a9-ab7e-c60f74c1c509.png" loading="lazy" class="shape" alt="shape">
         <img src="img/a571b3c0-359a-42a9-ab7e-c60f74c1c509.png" loading="lazy" class="shape2" alt="shape">
         <div class="container wow animate__fadeInUp " data-wow-duration="1s" data-wow-delay="0.5s">
-            <div class="title ">
+            <div class="title mb-4">
                 <h2 class="font1 text-uppercase"><img loading="lazy"
                         src="img/backend.gif"><span>P</span>roject<span>s</span></h2>
                 <div class="spreator"><img loading="lazy" src="img/ChatGPT Image Feb 15, 2026, 11_44_13 AM.png"></div>
             </div>
             <div class="container p-5">
+                <div class="titleProjects">
+                    <h5 class="font1">Front-End</h5>
+                </div>
                 <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                     <li class="nav-item" role="presentation">
                         <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-1"
@@ -460,11 +467,6 @@
                     </div>
                 </div>
             </div>
-
-
-
-            
-            
         </div>
     </section>
 
@@ -559,6 +561,7 @@
     <script src="js/data.js"></script>
     <script src="js/showSkills.js"></script>
     <script src="js/showProjects.js"></script>
+    <script src="js/showPopProjects.js"></script>
     <script src="js/global.js"></script>
     <script src="js/index.js"></script>
 </body>

@@ -15,7 +15,7 @@ function animateProjectColumns(container) {
 projects1.forEach((project) => {
   content1.innerHTML += `
     <div class="col-md-6 col-lg-4 columnProject">
-        <div class="box">
+        <div class="box" onclick="showProjectDetails(${project.id})">
             <img src="img/projects/${project.img}" loading="lazy" class="img-fluid" alt="${project.name}">
             <div class="layOut">
                 <div class="title titleBox">
@@ -34,7 +34,7 @@ setTimeout(() => animateProjectColumns(content1), 50);
 projects2.forEach((project) => {
   content2.innerHTML += `
     <div class="col-md-6 col-lg-4 columnProject">
-        <div class="box">
+        <div class="box" onclick="showProjectDetails(${project.id})">
             <img src="img/projects/${project.img}" loading="lazy" class="img-fluid" alt="${project.name}">
             <div class="layOut">
                 <div class="title titleBox">
@@ -53,7 +53,7 @@ setTimeout(() => animateProjectColumns(content2), 50);
 projects3.forEach((project) => {
   content3.innerHTML += `
     <div class="col-md-6 col-lg-4 columnProject">
-        <div class="box">
+        <div class="box" onclick="showProjectDetails(${project.id})">
             <img src="img/projects/${project.img}" loading="lazy" class="img-fluid" alt="${project.name}">
             <div class="layOut">
                 <div class="title titleBox">
@@ -72,7 +72,7 @@ setTimeout(() => animateProjectColumns(content3), 50);
 projects4.forEach((project) => {
   content4.innerHTML += `
     <div class="col-md-6 col-lg-4 columnProject">
-        <div class="box">
+        <div class="box" onclick="showProjectDetails(${project.id})">
             <img src="img/projects/${project.img}" loading="lazy" class="img-fluid" alt="${project.name}">
             <div class="layOut">
                 <div class="title titleBox">
