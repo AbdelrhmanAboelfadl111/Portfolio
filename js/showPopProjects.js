@@ -41,13 +41,23 @@ function showProjectDetails(id) {
                     <h4>${project.type}</h4>
                 </div>
             </div>
-            <div class="url">
+            <div class="links  d-flex justify-content-center align-items-center">
+                <div class="url">
                 <a href="${project.url}" target="_blank">
                     <button class="font2 btnDecorated">
                         <img src="img/hyperlink.png" alt="hyperlink" loading="lazy">
                     View Live Demo
                     </button>
                 </a>
+            </div>
+            <div class="urlGitHub">
+                <a href="${project.urlGitHub}" target="_blank">
+                    <button class="font2 btnDecorated">
+                        <img src="img/github-logo.png" alt="GitHub" loading="lazy">
+                     GitHub
+                    </button>
+                </a>
+            </div>
             </div>
 
     `;

@@ -33,7 +33,7 @@ var tools = [
   { name: "Angular CLI", level: "Basic", img: "programing.png" },
 ];
 var projects1 = [
-  { name: "A.O.T Book Store", id: "1", img: "p1.png" },
+  { name: "A.O.T Book Store", id: "1", img: "p1.1.png" },
   { name: "DENAR Academy", id: "2", img: "p2.png" },
   { name: "SemiCode Academy", id: "3", img: "p13.png" },
 ];
@@ -50,14 +50,14 @@ var projects3 = [
 var projects4 = [
   { name: "Wieder Gym", id: "10", img: "p9.png" },
   { name: "Fokir", id: "11", img: "p10.png" },
-  { name: "Mealify", id: "12", img: "p1.png" },
+  { name: "Mealify", id: "12", img: "p11.1.png" },
 ];
 
 var projectsDetails = [
   {
     name: "A.O.T Book Store",
     id: "1",
-    img: "p1.png",
+    img: "p1.1.png",
     languages: ["HTML", "Sass", "JavaScript", "Bootstrap"],
     description:
       "A.O.T STORE 🛒✨ Your ultimate digital hub for premium books, products, and creative content! 📚🔥 Fast, clean, and modern UI designed for the smoothest shopping experience 🚀💛 🔥 Features 🌀 Smooth animations & modern UI 🧩 Well-organized product categories ⚡ Fast performance 📱 Fully responsive on all devices 🛍️ Easy add-to-cart & checkout",
@@ -65,6 +65,7 @@ var projectsDetails = [
     type: "Solo Project",
     url: "https://abdelrhmanaboelfadl111.github.io/A.O.T-Book-Store/",
     year: "2025",
+    urlGitHub: "https://github.com/abdelrhmanaboelfadl111/A.O.T-Book-Store",
   },
   {
     name: "DENAR Academy",
@@ -77,6 +78,7 @@ var projectsDetails = [
     type: "Solo Project",
     url: "https://abdelrhmanaboelfadl111.github.io/Denar-Academy/",
     year: "2026",
+    urlGitHub: "https://github.com/abdelrhmanaboelfadl111/Denar-Academy",
   },
   {
     name: "SemiCode Academy",
@@ -89,6 +91,7 @@ var projectsDetails = [
     type: "Team Project",
     url: "https://www.semicode.tech/",
     year: "2026",
+    urlGitHub: "https://github.com/AbdelrhmanAboelfadl111/SemiCode-NoGif",
   },
   {
     name: "Delici",
@@ -101,6 +104,7 @@ var projectsDetails = [
     type: "Solo Project",
     url: "https://abdelrhmanaboelfadl111.github.io/DELICI/",
     year: "2025",
+    urlGitHub: "https://github.com/abdelrhmanaboelfadl111/DELICI",
   },
   {
     name: "Nike Store",
@@ -113,6 +117,7 @@ var projectsDetails = [
     type: "Solo Project",
     url: "https://abdelrhmanaboelfadl111.github.io/Nike-Store/",
     year: "2025",
+    urlGitHub: "https://github.com/abdelrhmanaboelfadl111/Nike-Store",
   },
   {
     name: "Elforkan",
@@ -125,6 +130,7 @@ var projectsDetails = [
     type: "Solo Project",
     url: "https://abdelrhmanaboelfadl111.github.io/Maktapt-Elforkan/",
     year: "2025",
+    urlGitHub: "https://github.com/abdelrhmanaboelfadl111/Maktapt-Elforkan",
   },
   {
     name: "Dine Out",
@@ -137,6 +143,7 @@ var projectsDetails = [
     type: "Solo Project",
     url: "https://abdelrhmanaboelfadl111.github.io/Dine-Out/",
     year: "2025",
+    urlGitHub: "https://github.com/abdelrhmanaboelfadl111/Dine-Out",
   },
   {
     name: "Kaffa",
@@ -149,6 +156,7 @@ var projectsDetails = [
     type: "Solo Project",
     url: "https://abdelrhmanaboelfadl111.github.io/Kaffa/",
     year: "2025",
+    urlGitHub: "https://github.com/abdelrhmanaboelfadl111/Kaffa",
   },
   {
     name: "Farm Game",
@@ -161,6 +169,7 @@ var projectsDetails = [
     type: "Solo Project",
     url: "https://abdelrhmanaboelfadl111.github.io/Farm-Game/",
     year: "2025",
+    urlGitHub: "https://github.com/abdelrhmanaboelfadl111/Farm-Game",
   },
   {
     name: "Wieder Gym",
@@ -173,6 +182,7 @@ var projectsDetails = [
     type: "Solo Project",
     url: "https://abdelrhmanaboelfadl111.github.io/Wieder-Gym/",
     year: "2025",
+    urlGitHub: "https://github.com/abdelrhmanaboelfadl111/Wieder-Gym",
   },
   {
     name: "Fokir",
@@ -185,11 +195,12 @@ var projectsDetails = [
     type: "Solo Project",
     url: "https://abdelrhmanaboelfadl111.github.io/Fokir/",
     year: "2025",
+    urlGitHub: "https://github.com/abdelrhmanaboelfadl111/Fokir",
   },
   {
     name: "Mealify",
     id: "12",
-    img: "p11.png",
+    img: "p11.1.png",
     languages: ["HTML", "Css", "JavaScript", "Bootstrap"],
     description:
       "Mealify is a 🍽️ Meal Planning and Recipe Management Application 📅 Organize your meals, discover new recipes, and manage your nutrition effortlessly 💻 Built with HTML, CSS & JavaScript — clean UI, responsive design 📷 Sections: Dashboard · Recipes · Meal Plan · Nutrition 🎯 Simplify your cooking and eating experience!",
