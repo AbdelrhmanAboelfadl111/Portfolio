@@ -10,7 +10,7 @@ function showProjectDetails(id) {
     popUpContent.innerHTML = `
 
             <div class="close" onclick="hideProjectDetails()">
-                <img src="img/alphabet.png" loading="lazy" class="btnExit">
+                <img src="img/alphabet.png"  class="btnExit">
             </div>
             <div class="title">
                 <h2 class="font1 mb-0">${project.name}</h2>

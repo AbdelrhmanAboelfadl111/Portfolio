@@ -16,7 +16,7 @@ projects1.forEach((project) => {
   content1.innerHTML += `
     <div class="col-md-6 col-lg-4 columnProject">
         <div class="box" onclick="showProjectDetails(${project.id})">
-            <img src="img/projects/${project.img}" loading="lazy" class="img-fluid" alt="${project.name}">
+            <img src="img/projects/${project.img}"  class="img-fluid" alt="${project.name}">
             <div class="layOut">
                 <div class="title titleBox">
                     <h2 class="font1 text-uppercase"><img class="LogoPro" src="img/backend.gif">${project.name}</h2>
@@ -35,7 +35,7 @@ projects2.forEach((project) => {
   content2.innerHTML += `
     <div class="col-md-6 col-lg-4 columnProject">
         <div class="box" onclick="showProjectDetails(${project.id})">
-            <img src="img/projects/${project.img}" loading="lazy" class="img-fluid" alt="${project.name}">
+            <img src="img/projects/${project.img}"  class="img-fluid" alt="${project.name}">
             <div class="layOut">
                 <div class="title titleBox">
                     <h2 class="font1 text-uppercase"><img class="LogoPro" src="img/backend.gif">${project.name}</h2>
@@ -54,7 +54,7 @@ projects3.forEach((project) => {
   content3.innerHTML += `
     <div class="col-md-6 col-lg-4 columnProject">
         <div class="box" onclick="showProjectDetails(${project.id})">
-            <img src="img/projects/${project.img}" loading="lazy" class="img-fluid" alt="${project.name}">
+            <img src="img/projects/${project.img}"  class="img-fluid" alt="${project.name}">
             <div class="layOut">
                 <div class="title titleBox">
                     <h2 class="font1 text-uppercase"><img class="LogoPro" src="img/backend.gif">${project.name}</h2>
@@ -73,7 +73,7 @@ projects4.forEach((project) => {
   content4.innerHTML += `
     <div class="col-md-6 col-lg-4 columnProject">
         <div class="box" onclick="showProjectDetails(${project.id})">
-            <img src="img/projects/${project.img}" loading="lazy" class="img-fluid" alt="${project.name}">
+            <img src="img/projects/${project.img}"  class="img-fluid" alt="${project.name}">
             <div class="layOut">
                 <div class="title titleBox">
                     <h2 class="font1 text-uppercase"><img class="LogoPro" src="img/backend.gif">${project.name}</h2>
