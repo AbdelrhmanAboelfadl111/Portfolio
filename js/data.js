@@ -33,9 +33,9 @@ var tools = [
   { name: "Angular CLI", level: "Basic", img: "programing.png" },
 ];
 var projects1 = [
-  { name: "A.O.T Book Store", id: "1", img: "p1.1.png" },
+  { name: "Octal Ai Agent", id: "1", img: "p1.png" },
   { name: "DENAR Academy", id: "2", img: "p2.png" },
-  { name: "SemiCode Academy", id: "3", img: "p13.png" },
+  { name: "SemiCode Academy", id: "3", img: "p12.png" },
 ];
 var projects2 = [
   { name: "Delici", id: "4", img: "p3.png" },
@@ -50,22 +50,23 @@ var projects3 = [
 var projects4 = [
   { name: "Wieder Gym", id: "10", img: "p9.png" },
   { name: "Fokir", id: "11", img: "p10.png" },
-  { name: "Mealify", id: "12", img: "p11.1.png" },
+  { name: "Mealify", id: "12", img: "p11.png" },
 ];
+var projects5 = [{ name: "A.O.T Book Store", id: "13", img: "p13.png" }];
 
 var projectsDetails = [
   {
-    name: "A.O.T Book Store",
+    name: "Octal Ai Agent",
     id: "1",
-    img: "p1.1.png",
-    languages: ["HTML", "Sass", "JavaScript", "Bootstrap"],
+    img: "p1.png",
+    languages: ["HTML", "Sass", "TypeScript", "Bootstrap"],
     description:
-      "A.O.T STORE 🛒✨ Your ultimate digital hub for premium books, products, and creative content! 📚🔥 Fast, clean, and modern UI designed for the smoothest shopping experience 🚀💛 🔥 Features 🌀 Smooth animations & modern UI 🧩 Well-organized product categories ⚡ Fast performance 📱 Fully responsive on all devices 🛍️ Easy add-to-cart & checkout",
-    cat: "E-commerce",
-    type: "Solo Project",
-    url: "https://abdelrhmanaboelfadl111.github.io/A.O.T-Book-Store/",
-    year: "2025",
-    urlGitHub: "https://github.com/abdelrhmanaboelfadl111/A.O.T-Book-Store",
+      "Octal is a full-stack, AI-powered web application designed to predict used car prices based on vehicle specifications or VIN (Vehicle Identification Number).The project integrates Machine Learning 🤖, Data Analysis 📊, FastAPI ⚡, Supabase 🗄️, and Angular 🅰️ to deliver a complete and scalable prediction platform.",
+    cat: "Ai & Machine Learning",
+    type: "Team Project",
+    url: "https://abdelrhmanaboelfadl111.github.io/Octal/",
+    year: "2026",
+    urlGitHub: "https://github.com/AbdelrhmanAboelfadl111/Octal",
   },
   {
     name: "DENAR Academy",
@@ -209,4 +210,17 @@ var projectsDetails = [
     url: "https://abdelrhmanaboelfadl111.github.io/Mealify/",
     year: "2025",
   },
+  {
+    name: "A.O.T Book Store",
+    id: "13",
+    img: "p13.png",
+    languages: ["HTML", "Sass", "JavaScript", "Bootstrap"],
+    description:
+      "A.O.T STORE 🛒✨ Your ultimate digital hub for premium books, products, and creative content! 📚🔥 Fast, clean, and modern UI designed for the smoothest shopping experience 🚀💛 🔥 Features 🌀 Smooth animations & modern UI 🧩 Well-organized product categories ⚡ Fast performance 📱 Fully responsive on all devices 🛍️ Easy add-to-cart & checkout",
+    cat: "E-commerce",
+    type: "Solo Project",
+    url: "https://abdelrhmanaboelfadl111.github.io/A.O.T-Book-Store/",
+    year: "2025",
+    urlGitHub: "https://github.com/abdelrhmanaboelfadl111/A.O.T-Book-Store",
+  }
 ];
