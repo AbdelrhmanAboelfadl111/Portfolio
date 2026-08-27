@@ -7,10 +7,7 @@
     font-family: 'Roboto'!important;
 }
 .font2{
-    font-family: 'Roboto';
-}
-a{
-    font-family: 'Roboto';
+    font-family: 'Montserrat';
 }
 span{
     color:#FF6B00;
@@ -121,6 +118,7 @@ button.splide__arrow{
     width: 50px;
     height: 50px;
     @include flexCenter();
+    border-radius: 50%;
     cursor: pointer;
     transition: all 0.5s;
     opacity: 0.7;
@@ -143,6 +141,7 @@ button.splide__arrow{
 }
 .scroll-indicator {
     position: absolute;
+    /* أو fixed لو عايزه يفضل ثابت */
     bottom: 2.5rem;
     left: 50.1%;
     display: flex;
